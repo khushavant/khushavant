@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+	<body bgcolor="orange"></body>
+<meta charset="utf-8">
+<title> Exam Form </title>
+<script type="text/javascript">
+function verify()
+	{
+		var name = document.getElementById("name");
+		var roll =document.getElementById("Roll No");
+		var subjects = document.getElementById("Subjects");
+		var msg= new Array();
+		var flag = 1;
+		
+		if(name.value == "")
+		{
+		    msg[0] = "Name is Required";
+		    flag = 0;
+		}     else { msg[0] = "";}
+	    	
+		
+		if(roll.value == "")
+		{
+		    msg[1] = "Roll No is Required";
+		    flag = 0;
+		} else { msg[1] = ""; }
+
+		if(subject.value == "")
+		{
+		    msg[2] = "Subjects is Required";
+		    flag = 0;
+		} else { msg[2] = "";}
+		
+		if(flag == 0)
+		{
+		    //Show Error Messages
+		    //alert(msg[0]+'\n' +msg[1]+'\n' +msg[2]);   
+		return false; 
+		} else 
+		{
+		 return true;
+		}
+		
+    }
+</script>
+</head>
+<body>
+<div align="center">
+<br>
+<br>
+<br>
+<h1>Exam Form</h1>
+<form method="post" action="" onREGISTER="return verify()">
+	<table border="1" cellspacing="1" cellpadding="10">
+	<tr>
+		<td colspan="2" align="center">-All fields are mandatory & use CAPITAL LETTERS- </td>
+    </tr>
+    <tr>
+     <td>Name: </td>
+     <td><input type="text" name="name" id="name" size="25" placeholder="Enter Name" /></td>
+    </tr>
+    <tr>
+     <td>Roll No: </td>
+     <td><input type="text" name="Roll No" id="roll" size="25" placeholder="Roll No" /></td>
+     </tr>
+     <tr>
+     	<td>Subjects: </td>
+     	<td><input type="text" name="Subject" id="sub" size="25" placeholder="Enter subjects" /></td>
+     </tr>
+     <tr>
+     	<td align="center" colspan="2">
+     	<input type="Submit" value="REGISTER" />
+     	<input type="Reset" value="CLEAR" />
+      </td>
+      </tr>
+   </table>
+  </form>
+  <br>
+  <br>
+  <br>
+  <h1>Designed By: Khushavant Ohekar </h1>
+  <h2>Mechanical - ME21D001</h2>
+</div>
+</body>
+</html>
